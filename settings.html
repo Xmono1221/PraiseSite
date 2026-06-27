@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>設定</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="page fade">
+            <header>
+                <h1>⚙ 設定</h1>
+                <p>
+                    アプリの表示内容を設定します♪
+                </p>
+                <div class="rainbow"></div>
+            </header>
+
+            <main class="settingBox">
+                <!-- 判定文字 -->
+                <div class="settingItem">
+                    <label for="keyword">
+                        判定したい文字
+                    </label>
+
+                    <input id="keyword" type="text" maxlength="50" placeholder="例：外出">
+                    <div class="settingNote">
+                        入力した文字が文章に含まれているか判定します。<br>
+                        英字は大文字・小文字を区別しません。
+                    </div>
+                </div>
+
+                <!-- 入力画面画像 -->
+                <div class="settingItem">
+                    <label>
+                        入力画面画像
+                    </label>
+
+                    <input id="indexImage" type="file" accept="image/png,image/jpeg,image/webp">
+                    <div class="settingNote">
+                        推奨500KB以下（PNG/JPG/WebP）
+                    </div>
+
+                    <img id="indexPreview" class="previewImage">
+                </div>
+
+
+                <!-- 一致画像 -->
+                <div class="settingItem">
+                    <label>
+                        一致したときの画像
+                    </label>
+
+                    <input id="matchImage" type="file" accept="image/png,image/jpeg,image/webp">
+                    <div class="settingNote">
+                        推奨500KB以下（PNG/JPG/WebP）
+                    </div>
+
+                    <img id="matchPreview" class="previewImage">
+                </div>
+
+
+                <!-- 不一致画像 -->
+                <div class="settingItem">
+                    <label>
+                        一致しなかったときの画像
+                    </label>
+                    <input id="noMatchImage" type="file" accept="image/png,image/jpeg,image/webp">
+                    <div class="settingNote">
+                        推奨500KB以下（PNG/JPG/WebP）
+                    </div>
+                    <img id="noMatchPreview" class="previewImage">
+                </div>
+                <button id="saveButton">
+                    💾 保存
+                </button>
+
+                <button id="clearButton" class="dangerButton">
+                    🗑 設定をクリア
+                </button>
+
+                <button class="subButton" onclick="location.href='index.html'">
+                    ← 戻る
+                </button>
+
+            </main>
+
+            <footer>
+                設定はブラウザ（Local Storage）へ保存されます。
+            </footer>
+        </div>
+        <script src="js/settings.js"></script>
+    </body>
+
+</html>

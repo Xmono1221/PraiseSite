@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>報告サイト</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="page fade">
+            <header>
+                <h1>🌈 報告サイト 🌈</h1>
+
+                <p>
+                    今日の出来事を報告してね！
+                </p>
+                <div class="rainbow"></div>
+
+
+                <main>
+                    <div class="imageFrame">
+                        <img id="indexImage">
+                    </div>
+
+                    <p class="guide">
+                        ▼ 今日の報告 ▼
+                    </p>
+
+                    <textarea id="text" placeholder="例：今日はご飯を食べたよ"></textarea>
+
+                    <button id="judgeButton" disabled>
+                        ★ 報告する ★
+                    </button>
+
+                    <button class="subButton" onclick="location.href='settings.html'">
+                        ⚙ 設定
+                    </button>
+
+                </main>
+
+                <footer>
+                    いつも報告ありがとう♪
+                </footer>
+
+        </div>
+        <script src="js/index.js"></script>
+    </body>
+
+</html>

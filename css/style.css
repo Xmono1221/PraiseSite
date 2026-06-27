@@ -1,0 +1,419 @@
+/* ==========================================
+   全体
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Yu Gothic","Meiryo",sans-serif;
+    background:#fff7fb;
+    background-image:
+    radial-gradient(#ffd8ec 2px,transparent 2px),
+    radial-gradient(#fff2b5 2px,transparent 2px);
+    background-size:70px 70px;
+    color:#444;
+}
+
+
+/* ==========================================
+   メインカード
+========================================== */
+.page{
+    width:900px;
+    margin:30px auto;
+    background:white;
+    border-radius:20px;
+    box-shadow:
+        0 0 20px rgba(0,0,0,.12);
+    overflow:hidden;
+}
+
+
+/* ==========================================
+   ヘッダー
+========================================== */
+header{
+    text-align:center;
+    padding:25px;
+}
+
+header h1{
+    color:#ff4d88;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:20px;
+    color:#666;
+}
+
+
+/* ==========================================
+   虹
+========================================== */
+.rainbow{
+    height:8px;
+    background:
+    linear-gradient(
+        90deg,
+        #ff4d4d,
+        #ff9b00,
+        #ffe600,
+        #49d849,
+        #33c7ff,
+        #3f6cff,
+        #b94dff
+    );
+}
+
+
+/* ==========================================
+   画像表示
+========================================== */
+.imageFrame{
+    width:430px;
+    height:430px;
+    margin:35px auto;
+    border:3px solid #ffb7d5;
+    border-radius:20px;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.imageFrame img{
+    max-width:390px;
+    max-height:390px;
+}
+
+
+/* ==========================================
+   ガイド
+========================================== */
+.guide{
+    text-align:center;
+    color:#ff4d88;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:20px;
+
+}
+
+
+/* ==========================================
+   テキストエリア
+========================================== */
+textarea{
+    display:block;
+    width:85%;
+    height:170px;
+    margin:auto;
+    border-radius:15px;
+    border:2px solid #ffd1e4;
+    padding:15px;
+    font-size:20px;
+    resize:none;
+    outline:none;
+}
+
+textarea:focus{
+    border-color:#ff69b4;
+}
+
+
+/* ==========================================
+   テキストボックス
+========================================== */
+input[type=text]{
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+    border:2px solid #ffd1e4;
+    font-size:18px;
+}
+
+input[type=file]{
+    margin-top:10px;
+}
+
+
+/* ==========================================
+   ボタン
+========================================== */
+button{
+    display:block;
+    margin:30px auto;
+    width:280px;
+    height:60px;
+    border:none;
+    border-radius:15px;
+    background:#ff5f96;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    background:#ff3d7f;
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+button:disabled{
+    background:#cccccc;
+    cursor:not-allowed;
+}
+
+
+/* ==========================================
+   サブボタン
+========================================== */
+.subButton{
+    width:180px;
+    background:#74b8ff;
+}
+
+.subButton:hover{
+    background:#4ea4ff;
+}
+
+
+/* ==========================================
+   メッセージ
+========================================== */
+#message{
+    text-align:center;
+    margin:30px;
+    font-size:38px;
+    font-weight:bold;
+}
+
+
+/* ==========================================
+   一致
+========================================== */
+.match{
+    color:#ff2b73;
+    text-shadow:
+        2px 2px 6px rgba(255,80,150,.4);
+    animation:bounce .9s;
+}
+
+
+/* ==========================================
+   不一致
+========================================== */
+.no-match{
+    color:#4d8dff;
+    text-shadow:
+        2px 2px 6px rgba(80,130,255,.3);
+}
+
+
+/* ==========================================
+   跳ねる
+========================================== */
+@keyframes bounce{
+    0%{
+        transform:translateY(0);
+    }
+
+    20%{
+        transform:translateY(-28px);
+    }
+
+    40%{
+        transform:translateY(0);
+    }
+
+    60%{
+        transform:translateY(-14px);
+    }
+
+    80%{
+        transform:translateY(0);
+    }
+
+    90%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   設定画面
+========================================== */
+.settingBox{
+    width:85%;
+    margin:40px auto;
+}
+
+.settingItem{
+    margin-bottom:30px;
+}
+
+.settingItem label{
+    display:block;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.settingNote{
+    margin-top:8px;
+    color:#888;
+    font-size:14px;
+}
+
+.previewContainer{
+    width:220px;
+    height:220px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    margin-top:10px;
+
+    border:2px solid #ffc8df;
+    border-radius:15px;
+
+    background:#fffdfd;
+}
+
+.previewImage{
+    max-width:190px;
+    max-height:190px;
+
+    object-fit:contain;
+}
+
+/* ============================
+   削除ボタン
+============================ */
+.dangerButton{
+    width:280px;
+    background:#ff6b6b;
+}
+
+.dangerButton:hover{
+    background:#e74c3c;
+}
+
+
+
+/* ==========================================
+   フッター
+========================================== */
+footer{
+    margin-top:40px;
+    background:#ffe2ee;
+    padding:18px;
+    text-align:center;
+    color:#ff4d88;
+    font-weight:bold;
+}
+
+
+/* ==========================================
+   フェードイン
+========================================== */
+
+.fade{
+    animation:fade .5s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+
+/* ==========================================
+   スマホ対応
+========================================== */
+
+@media screen and (max-width:900px){
+.page{
+    width:96%;
+}
+
+.imageFrame{
+    width:90%;
+    height:auto;
+    padding:20px;
+}
+
+.imageFrame img{
+    width:100%;
+    height:auto;
+}
+
+textarea{
+    width:92%;
+}
+
+button{
+    width:90%;
+}
+
+.previewImage{
+    display:block;
+    width:200px;
+    height:200px;
+    margin-top:15px;
+    border:2px solid #ffc8df;
+    border-radius:12px;
+    background:#ffffff;
+    object-fit:contain;
+    object-position:center;
+    padding:10px;
+}
+
+/* ================================
+   Result
+================================ */
+.resultArea{
+    width:85%;
+    margin:30px auto;
+}
+
+.resultArea h3{
+    color:#ff4d88;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+.inputResult{
+    min-height:120px;
+    border:2px solid #ffd3e4;
+    border-radius:15px;
+    background:#fffdfd;
+    padding:15px;
+    font-size:18px;
+    line-height:1.7;
+    white-space:pre-wrap;
+}
+}
