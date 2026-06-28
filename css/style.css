@@ -207,7 +207,7 @@ button:disabled{
     color:#ff2b73;
     text-shadow:
         2px 2px 6px rgba(255,80,150,.4);
-    animation:bounce .9s;
+    animation:bounce 1s ease-in-out infinite;
 }
 
 
